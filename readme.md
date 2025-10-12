@@ -17,7 +17,7 @@ Part 1: Conceptual_design
 
 Part 2: Data acquisition and preparation
 
-1. MAFW: https://dl.acm.org/doi/pdf/10.1145/3503161.3548190 
+1. MAFW Source Link: https://dl.acm.org/doi/pdf/10.1145/3503161.3548190 
 The open public dataset, MAFW, is comprised of 10045 video clips sourced from diverse media including movies, TV dramas, and short videos across multiple 
 cultures (China, Japan, Korea, Europe, America, and India). It provides rich multi-modal annotations including single and multiple
 expression labels, bilingual emotional descriptive texts, and automatic annotations such as facial landmarks and gender information. 
@@ -36,7 +36,7 @@ This data set has pre-processed frames for each video clip in 224 x 224 resoluti
 technlogy limitation and follow a 80-10-10 train/test/val pattern for performance evaluation. 
 
 
-2. FERV39K: https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_FERV39k_A_Large-Scale_Multi-Scene_Dataset_for_Facial_Expression_Recognition_in_CVPR_2022_paper.pdf
+2. FERV39K Source Link: https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_FERV39k_A_Large-Scale_Multi-Scene_Dataset_for_Facial_Expression_Recognition_in_CVPR_2022_paper.pdf
 The open dataset, FERV39K, a large-scale multi-scene dataset, coined as FERV39k. This dataset is novel due to the following
 three aspects: (1) multi-scene hierarchy and expression class, (2) generation of candidate video clips, (3) trusted manual
 labelling process. I choose 4 scenarios which are subdivided into 22 scenes, annotate 86k samples automatically obtained from 4k videos
@@ -52,7 +52,7 @@ The IP and AC groups will be passed to PRs for judgement, which also made this l
 I plan to pre-process frames into frames of 224 x 224 resolution. I plan to use 10% (~4k) of the full dataset here due to technlogy limitation 
 and follow a 80-10-10 train/test/val pattern for performance evaluation. 
 
-3. DFEW, link: https://dfew-dataset.github.io/
+3. DFEW Source Link: https://dfew-dataset.github.io/
 Dynamic Facial Expression in-the-Wild (DFEW) is a large-scale facial expression database with 16372 very challenging video clips taken from movies. Clips in the
 DFEW database are of various challenging interferences, such as extreme illumination, occlusions, and capricious pose changes. Based on the crowdsourcing annotations,
 we hired 12 expert annotators, and each clip has been independently labeled ten times by them. DFEW database has enormous diversities, large quantities, and rich
