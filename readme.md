@@ -117,12 +117,13 @@ Foundation model advantages: PaliGemma is pre-trained on large-scale vision-lang
 Prefix tuning + LoRA benefits: Parameter efficiency: Only ~118M trainable parameters vs. 3.1B total. We maintain pre-trained knowledge while adapting to new domain. This gives faster training and lower memory requirements while preventing the model from catastrophically forgetting.
 
 
-**Demo**: The CSV file has the following columns:
-- file_path: path to video file
+**Demo**: Core columns inside the cleaned CSV file:
+- file_path: actual path to video file
 - video_idx: unique identifier for indexing
-- promis_anx: anxiety score (target label)
-- promis_dep: depression score (target label)
-- prompt: text prompt for the model
+- label: numerical label indicating the emotion type
+- actual: actual text label indicating the emotion of the person in the video
+
+We also expect to have prompt included, but we are still testing out the performance of this input as we believe the facial emotional changes should be the primary focus for this project. We decide to exclude that for now. 
 
 **Instructions**: Clone this repo, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
 1. Read in the pre-process csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, actual, video_id, file_path. 
