@@ -130,10 +130,11 @@ Blendshapes:
 
 For the data pre-process part, stay in the main directory, and run "python data_clean.py" or "python3 data_clean.py". File paths are already set up for easy check. 
 This scripts does the following task:
-1. Read in the raw csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, video_id, file_path.
+1. Read in the raw csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, file_path.
 2. Convert the numerical label from column "label" into the actual text label using the numerical indicator in the front of each label in other columns.
-3. After mapping is done, save all mapped text labels into a new column named "actual".
-4. Save the csv file under pre-defined output directory.
+3. Add a new column named "video_id" for better view. This is the same as "order" but to make it clean. 
+4. After mapping is done, save all mapped text labels into a new column named "actual".
+5. Save the csv file under pre-defined output directory.
 
 Here is the original csv structure: 
 
