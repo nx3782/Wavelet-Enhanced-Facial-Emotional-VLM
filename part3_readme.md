@@ -126,7 +126,26 @@ Blendshapes:
 
 **Contribution**: This is an individual final project work. So I have done data curation and preparation, including data cleaning and data pre-processing alone throughout the semester. 
 
-**Instructions on Codes**: For the data pre-process part, clone this repo, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
+**Instructions on Codes**: First git clone this repo and run "cd Wavelet-Enhanced-Facial-Emotional-VLM" inside Xcode or other environments. 
+
+For the data pre-process part, stay in the main directory, and run "python data_clean.py" or "python3 data_clean.py". File paths are already set up for easy check. 
+This scripts does the following task:
+1. Read in the raw csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, video_id, file_path.
+2. Convert the numerical label from column "label" into the actual text label using the numerical indicator in the front of each label in other columns.
+3. After mapping is done, save all mapped text labels into a new column named "actual".
+4. Save the csv file under pre-defined output directory.
+
+Here is the original csv structure: 
+
+<tr><td width="30%"><image src="samples-gif/original_csv.png" /></td><td width="15%"></td></tr>
+
+
+You can expect the following output structure in the csv file after this mapping.
+
+<tr><td width="30%"><image src="samples-gif/label_mapping.png" /></td><td width="15%"></td></tr>
+
+
+For the landmarks and blendshapes generation part, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
 1. Read in the pre-process csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, actual, video_id, file_path. 
 2. Load video using OpenCV
 3. Extract frames and convert to RGB
