@@ -23,7 +23,7 @@ emotion_map = {
 # Map labels to actual emotion text
 df['actual'] = df['label'].map(emotion_map)
 df["video_id"] = df["order"]
-df["file_path"] = "./data/DFEW/part_1/" + df["video_id"].astype(str) + ".mp4"
+df["file_path"] = "./part_1/" + df["video_id"].astype(str) + ".mp4"
 
 
 # Save the updated CSV
