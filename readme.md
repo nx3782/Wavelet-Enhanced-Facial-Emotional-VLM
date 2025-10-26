@@ -117,7 +117,106 @@ Foundation model advantages: PaliGemma is pre-trained on large-scale vision-lang
 Prefix tuning + LoRA benefits: Parameter efficiency: Only ~118M trainable parameters vs. 3.1B total. We maintain pre-trained knowledge while adapting to new domain. This gives faster training and lower memory requirements while preventing the model from catastrophically forgetting.
 
 
-**Demo**: A few illustrations demonstrating how your methods processed the training data, for instance show a few segmentation results (3 points).
+**Demo**: The CSV file has the following columns:
+- file_path: path to video file
+- video_idx: unique identifier for indexing
+- promis_anx: anxiety score (target label)
+- promis_dep: depression score (target label)
+- prompt: text prompt for the model
+
+**Instructions**: Clone this repo, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
+1. Read in the pre-process csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, actual, video_id, file_path. 
+2. Load video using OpenCV
+3. Extract frames and convert to RGB
+4. Process each frame through MediaPipe FaceLandmarker
+5. Collect landmarks (478, 3) and blendshapes (52,) per frame
+6. Apply wavelet transform to temporal trajectories
+7. Save compressed features to NPY file with pre-defined output path. 
+
+**Output Format**: NPY file containing array of dictionaries, example views are also given here for better structure view:
+Each entry: {
+    'file_path': str,
+    'landmarks': (10, 478, 3) array,
+    'blendshapes': (10, 52) array
+}
+
+<tr><td width="30%"><image src="samples-gif/npy_example_1.png" /></td><td width="15%"></td></tr>
+<tr><td width="30%"><image src="samples-gif/npy_example_2.png" /></td><td width="15%"></td></tr>
+<tr><td width="30%"><image src="samples-gif/npy_example_3.png" /></td><td width="15%"></td></tr>
+
+
+### 3.2 Wavelet Feature Extraction
+
+**Configuration:**
+- Wavelet type: Haar (simplest, computationally efficient)
+- Number of coefficients: 10 (can adjust)
+- Normalization: Coefficients divided by √(2^L)
+
+**Adaptive decomposition level:**
+```
+For video with T frames:
+T' = 2^⌈log₂(T)⌉
+L = ⌊log₂(T' / 10)⌋
+
+Example:
+- 300 frames → T'=512 → L=5 → ~10 coefficients
+- 1800 frames → T'=2048 → L=7 → ~8 coefficients (padded to 10)
+
+
+### 3.3 Model Training Configuration for now (still under tuning)
+
+**Model:** PaliGemma-2-3B (mix-448)
+- Vision encoder: SigLIP
+- Language model: Gemma-2-2B
+- Input resolution: 448×448
+
+**Training Strategy:**
+- Optimizer: AdamW
+- Learning rate: 5e-5 with warmup
+- Batch size: 2-4 (limited by GPU memory)
+- Training scheme: Regression on PROMIS scores
+
+**Efficient Fine-tuning:**
+- LoRA rank: 8-16
+- LoRA alpha: 16-32
+- Target modules: Query and Value projections
+- Trainable parameters: ~118M / 3.1B (~3.8%)
+
+### 3.4 Data Quality Considerations
+
+**Face detection quality:**
+- Minimum frames required: 10 frames with detected faces
+- Quality threshold: At least 90% of frames should have detectable faces
+- Failed videos: Filled with zero features and flagged for review
+
+**Temporal consistency:**
+- MediaPipe's VIDEO mode ensures temporal smoothness
+- Tracking across frames reduces jitter
+- Timestamp-based processing maintains temporal ordering
+
+**Handling edge cases:**
+- Occluded faces: MediaPipe interpolates missing landmarks
+- Multiple faces: Only process primary face (closest to center)
+- Poor lighting: MediaPipe's robust detection handles moderate lighting variations
+- 
+
+## 4. Expected Performance Characteristics
+
+### 4.1 Feature Dimensionality
+
+**Compression achieved:**
+Before wavelet transform, we have:
+- 60-second video at 30 FPS = 1800 frames
+- 478 landmarks × 3 coords × 1800 frames = 2,581,200 values
+
+After wavelet transform, we have:
+- 478 landmarks × 3 coords × 10 coeffs = 14,340 values
+- Compression ratio: 180x smaller
+
+Blendshapes:
+- 52 blendshapes × 1800 frames = 93,600 values
+- After wavelets: 52 × 10 = 520 values
+- Compression ratio: 180x smaller
 
 **Contribution**: This is an individual final project work. So I have done data curation and preparation, including data cleaning and data pre-processing alone throughout the semester. 
 
