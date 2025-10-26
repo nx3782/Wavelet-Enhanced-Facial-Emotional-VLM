@@ -1,0 +1,3 @@
+1happy,2sad,3neutral,4angry,5surprise,6disgust,7fear,order,label,actual,video_id,file_path
+0,6,4,0,0,0,0,1,2,sad,1,/content/drive/MyDrive/60535_CV/final/data/DFEW/part_1/1.mp4
+0,2,8,0,0,0,0,2,3,neutral,2,/content/drive/MyDrive/60535_CV/final/data/DFEW/part_1/2.mp4
