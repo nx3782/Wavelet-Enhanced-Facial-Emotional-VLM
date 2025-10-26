@@ -1,1 +1,2 @@
-
+# The actual csv file with these following columns: video ID, file path, transcription, true single emotion label, file_name, 
+# video index, and also the prompt for inference
