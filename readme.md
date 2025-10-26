@@ -81,16 +81,44 @@ I follow an 80–10–10 split, where the 20% (val and test) is reserved for eva
 <tr><td width="30%"><image src="samples-gif/example_category.png" /></td><td width="15%"></td></tr>
 
 Part 3: First Update
-
-In this part you should have your data preprocessing, segmentation and feature extraction implemented. Some customized projects may not follow this standard pipeline, so remember to discuss with Adam what are the appropriate deliverables for you in this phase.  What to do and what to deliver?
-
 A report (no page limit, but try to be concise; 1000-2000 words should suffice) as a separate "Part 3" section of the readme.md in your GitHub that includes:
+
 **Methods**: A list of the methods already applied for data pre-processing and feature extraction (1 points).
+1.1 Data Input: In this section, we obatin video data from the DFEW dataset. As described in earlier part, these input videos contain clear facial expressions and movements along with true emotion labels. We may only use this dataset for training purpose because this contains rich amount of data, around 11k and also clear 7 types of emotion label for all videos. 
+Metadata: We create a CSV file containing video IDs, video paths, and true emotional labels to keep the data clean and easy to use in the future. We have a total of 11697 video inputs with an average length of 10 seconds for use. There are total 9356 training data and 2341 test data, which follows a 80-20 train/test split here. We have attached the sample csv file for better understanding on the data structure. 
+Pre-extracted Features: We have extracted facial landmarks (478 3D points) and blendshapes (52 facial expression coefficients) extracted using MediaPipe for each video and store them inside the npy file. Example npy file is also given in this repo for quick view. 
+
+1.2 Facial Feature Extraction: For this part, we use MediaPipe's FaceLandmarker to extract two types of features from each video frame:
+Landmarks: (478 points × 3 coordinates), 3D coordinates (x, y, z) for 478 facial points, which captures geometric structure of the face and tracks spatial positions of key facial features (eyes, mouth, nose,etc.). Each of the 478 landmarks is tracked across all video frames, creating a temporal trajectory for each coordinate (x, y, z). We apply Haar wavelet decomposition separately to each coordinate's trajectory, compressing it from T frames to 10 coefficients (we can adjust this). This results in a final shape of (10, 478, 3) where each landmark's temporal movement is represented by 10 wavelet coefficients per coordinate.
+
+Blendshapes: (52 coefficients), this is a semantic representation of facial expressions. Each coefficient represents a specific facial action (smile, frown, eyebrow raise, etc.) A pre-normalized expression space that generalizes across individuals. Each of the 52 blendshape values is tracked across all video frames, creating 52 temporal signals. We apply Haar wavelet decomposition to each blendshape's trajectory independently, compressing each from T frames to 10 coefficients. This results in a final shape of (10, 52) where each blendshape's temporal activation pattern is represented by 10 wavelet coefficients.
+
+In both cases, the wavelet transform solves the variable-length problem: whether a video has 300 frames or 1800 frames, we always get exactly 10 coefficients, making it possible to feed fixed-size features into the neural network while preserving temporal dynamics at multiple time scales.
 
 **Justification**: A justification why you decided to use these algorithms (6 points). For instance, if you used Canny edge detection and Hough transform to detect lines, say why you believe this feature extraction is good for your project.
+2.1 Why MediaPipe for Feature Extraction: This is an industry-standard tool for facial landmark detection. It provides both geometric (landmarks) and semantic (blendshapes) representations with strong real-time performance for large-scale processing. It is robust to lighting conditions and head poses. We have more landmarks (478) compared to traditional methods (68 points). MediaPipe was pre-trained on diverse datasets ensuring generalization. Blendshapes also provide interpretable, normalized expression space.
+
+2.2 Why Wavelet Transform for Temporal Encoding
+Problem: Videos have variable durations (ranging from a few seconds to 60+ seconds), but neural networks require fixed-size inputs.
+Thus, we want to try using wavelets to solve this. Why it work here? This gives us fixed-length output: Regardless of video duration, we get exactly 10 coefficients or more based on the setup. It also gives multi-scale information preservation: Captures both slow trends (approximation) and rapid changes (details). This is computationally efficient with O(n) complexity, much faster than recurrent networks. Also it does better at information preservation compared to traiditional averaging or uniform sampling, which guarantees lots of information loss on temporal dynamics, decent amount of frames even though they can be redundant.  
+
+2.3 Why Combine Landmarks and Blendshapes
+Complementary information: While landmarks capture individual-specific facial geometry and person-dependent patterns which help prevent overfit on certain facial structures only, blendshapes capture expression semantics in a normalized, person-independent space, which help prevent missing subtle geometric variations on the face. By combining both extra features here, they provide both "what the face looks like" and "what expression is being made" with explicit distance information also available. 
+
+2.4 Why Multi-Modal Fusion:
+Visual content provides context: Input videos give us background information, lighting, environment, and overall scene understanding. We also have non-facial cues (body language, posture).
+
+Landmarks provide precision: We have exact facial movements and micro-expressions, We also have temporal dynamics of expressions. Additionally we have fine-grained emotion indicators.
+Cross-attention benefits: This allows landmark features to attend to relevant visual regions. It also enables text to guide which facial features to focus on. Also it creates synergistic representations which are stronger than concatenation.
+
+2.5 Why Do We use PaliGemma-based Architecture
+Foundation model advantages: PaliGemma is pre-trained on large-scale vision-language data, which means it has ttrong visual understanding and reasoning capabilities. Also this is efficient in inference with 3B parameters. 
+
+Prefix tuning + LoRA benefits: Parameter efficiency: Only ~118M trainable parameters vs. 3.1B total. We maintain pre-trained knowledge while adapting to new domain. This gives faster training and lower memory requirements while preventing the model from catastrophically forgetting.
+
 
 **Demo**: A few illustrations demonstrating how your methods processed the training data, for instance show a few segmentation results (3 points).
 
-**Contribution**: For teams: explain individual contributions of each team member (this is needed to have this assignment graded).
+**Contribution**: This is an individual final project work. So I have done data curation and preparation, including data cleaning and data pre-processing alone throughout the semester. 
 
 **Instructions on Codes**: Push your current codes to your project repository (5 points). These codes should implement what you described in the report. Provide instructions how to run your codes on a data example (attach this example to your codes). Either Adam or the TA will run them to see how the current solution works.
