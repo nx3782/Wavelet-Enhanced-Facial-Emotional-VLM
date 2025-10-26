@@ -85,8 +85,12 @@ Part 3: First Update
 In this part you should have your data preprocessing, segmentation and feature extraction implemented. Some customized projects may not follow this standard pipeline, so remember to discuss with Adam what are the appropriate deliverables for you in this phase.  What to do and what to deliver?
 
 A report (no page limit, but try to be concise; 1000-2000 words should suffice) as a separate "Part 3" section of the readme.md in your GitHub that includes:
-A list of the methods already applied for data pre-processing and feature extraction (1 points).
-A justification why you decided to use these algorithms (6 points). For instance, if you used Canny edge detection and Hough transform to detect lines, say why you believe this feature extraction is good for your project.
-A few illustrations demonstrating how your methods processed the training data, for instance show a few segmentation results (3 points).
-For teams: explain individual contributions of each team member (this is needed to have this assignment graded).
-Push your current codes to your project repository (5 points). These codes should implement what you described in the report. Provide instructions how to run your codes on a data example (attach this example to your codes). Either Adam or the TA will run them to see how the current solution works.
+**Methods**: A list of the methods already applied for data pre-processing and feature extraction (1 points).
+
+**Justification**: A justification why you decided to use these algorithms (6 points). For instance, if you used Canny edge detection and Hough transform to detect lines, say why you believe this feature extraction is good for your project.
+
+**Demo**: A few illustrations demonstrating how your methods processed the training data, for instance show a few segmentation results (3 points).
+
+**Contribution**: For teams: explain individual contributions of each team member (this is needed to have this assignment graded).
+
+**Instructions on Codes**: Push your current codes to your project repository (5 points). These codes should implement what you described in the report. Provide instructions how to run your codes on a data example (attach this example to your codes). Either Adam or the TA will run them to see how the current solution works.
