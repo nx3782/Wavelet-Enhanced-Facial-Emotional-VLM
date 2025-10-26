@@ -19,7 +19,8 @@ def continue_training():
     train_csv = "./data/emotion_recognition_no_think_full_trans.csv"
     # landmark_path = "./data/combined_dataset/wavelets_train.npy"
     landmark_path = "./data/combined_dataset/wl_coeffs_approx_10.npy"
-    output_dir = "./models/paligemma_landmark_continued"
+    # output_dir = "./models/paligemma_landmark_continued"
+    output_dir = "./models/lora_paligemma_regression_9010_epoch_11_1022/"
     
     # Configuration (same as original training)
     config = {
