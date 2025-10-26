@@ -80,10 +80,10 @@ I follow an 80–10–10 split, where the 20% (val and test) is reserved for eva
 
 <tr><td width="30%"><image src="samples-gif/example_category.png" /></td><td width="15%"></td></tr>
 
-Part 3: First Update
-A report (no page limit, but try to be concise; 1000-2000 words should suffice) as a separate "Part 3" section of the readme.md in your GitHub that includes:
 
-**Methods**: A list of the methods already applied for data pre-processing and feature extraction (1 points).
+Part 3: First Update
+
+**Methods**:
 1.1 Data Input: In this section, we obatin video data from the DFEW dataset. As described in earlier part, these input videos contain clear facial expressions and movements along with true emotion labels. We may only use this dataset for training purpose because this contains rich amount of data, around 11k and also clear 7 types of emotion label for all videos. 
 Metadata: We create a CSV file containing video IDs, video paths, and true emotional labels to keep the data clean and easy to use in the future. We have a total of 11697 video inputs with an average length of 10 seconds for use. There are total 9356 training data and 2341 test data, which follows a 80-20 train/test split here. We have attached the sample csv file for better understanding on the data structure. 
 Pre-extracted Features: We have extracted facial landmarks (478 3D points) and blendshapes (52 facial expression coefficients) extracted using MediaPipe for each video and store them inside the npy file. Example npy file is also given in this repo for quick view. 
@@ -95,7 +95,7 @@ Blendshapes: (52 coefficients), this is a semantic representation of facial expr
 
 In both cases, the wavelet transform solves the variable-length problem: whether a video has 300 frames or 1800 frames, we always get exactly 10 coefficients, making it possible to feed fixed-size features into the neural network while preserving temporal dynamics at multiple time scales.
 
-**Justification**: A justification why you decided to use these algorithms (6 points). For instance, if you used Canny edge detection and Hough transform to detect lines, say why you believe this feature extraction is good for your project.
+**Justification**:
 2.1 Why MediaPipe for Feature Extraction: This is an industry-standard tool for facial landmark detection. It provides both geometric (landmarks) and semantic (blendshapes) representations with strong real-time performance for large-scale processing. It is robust to lighting conditions and head poses. We have more landmarks (478) compared to traditional methods (68 points). MediaPipe was pre-trained on diverse datasets ensuring generalization. Blendshapes also provide interpretable, normalized expression space.
 
 2.2 Why Wavelet Transform for Temporal Encoding
