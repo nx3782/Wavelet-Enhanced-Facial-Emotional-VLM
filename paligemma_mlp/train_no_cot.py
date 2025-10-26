@@ -17,7 +17,8 @@ def continue_training():
     checkpoint_path = "./models/paligemma-step=3000-epoch=1.ckpt"
     base_model_path = "google/paligemma2-3b-mix-448"
     train_csv = "./data/emotion_recognition_no_think_full_trans.csv"
-    landmark_path = "./data/combined_dataset/wavelets_train.npy"
+    # landmark_path = "./data/combined_dataset/wavelets_train.npy"
+    landmark_path = "./data/combined_dataset/wl_coeffs_approx_10.npy"
     output_dir = "./models/paligemma_landmark_continued"
     
     # Configuration (same as original training)
