@@ -79,3 +79,16 @@ I follow an 80–10–10 split, where the 20% (val and test) is reserved for eva
 <b></b>Categories expect to see within these datasets:
 
 <tr><td width="30%"><image src="samples-gif/example_category.png" /></td><td width="15%"></td></tr>
+
+Part 3: First Update
+
+In this part you should have your data preprocessing, segmentation and feature extraction implemented. Some customized projects may not follow this standard pipeline, so remember to discuss with Adam what are the appropriate deliverables for you in this phase. 
+
+What to do and what to deliver?
+
+A report (no page limit, but try to be concise; 1000-2000 words should suffice) as a separate "Part 3" section of the readme.md in your GitHub that includes:
+A list of the methods already applied for data pre-processing and feature extraction (1 points).
+A justification why you decided to use these algorithms (6 points). For instance, if you used Canny edge detection and Hough transform to detect lines, say why you believe this feature extraction is good for your project.
+A few illustrations demonstrating how your methods processed the training data, for instance show a few segmentation results (3 points).
+For teams: explain individual contributions of each team member (this is needed to have this assignment graded).
+Push your current codes to your project repository (5 points). These codes should implement what you described in the report. Provide instructions how to run your codes on a data example (attach this example to your codes). Either Adam or the TA will run them to see how the current solution works.
