@@ -82,9 +82,7 @@ I follow an 80–10–10 split, where the 20% (val and test) is reserved for eva
 
 Part 3: First Update
 
-In this part you should have your data preprocessing, segmentation and feature extraction implemented. Some customized projects may not follow this standard pipeline, so remember to discuss with Adam what are the appropriate deliverables for you in this phase. 
-
-What to do and what to deliver?
+In this part you should have your data preprocessing, segmentation and feature extraction implemented. Some customized projects may not follow this standard pipeline, so remember to discuss with Adam what are the appropriate deliverables for you in this phase.  What to do and what to deliver?
 
 A report (no page limit, but try to be concise; 1000-2000 words should suffice) as a separate "Part 3" section of the readme.md in your GitHub that includes:
 A list of the methods already applied for data pre-processing and feature extraction (1 points).
