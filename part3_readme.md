@@ -143,7 +143,7 @@ Here is the original csv structure:
 
 You can expect the following output structure in the csv file after this mapping.
 
-<tr><td width="30%"><image src="samples-gif/label_mapping.png" /></td><td width="15%"></td></tr>
+<tr><td width="30%"><image src="samples-gif/label_map.png" /></td><td width="15%"></td></tr>
 
 
 For the landmarks and blendshapes generation part, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
