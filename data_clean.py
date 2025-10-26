@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 
 # Read the CSV file
-df = pd.read_csv('/content/drive/MyDrive/60535_CV/final/data/DFEW/DFEW_emo_label.csv')
+df = pd.read_csv('./data/DFEW/DFEW_emo_label.csv')
 
 # Define emotion mapping
 emotion_map = {
@@ -25,7 +25,7 @@ df['actual'] = df['label'].map(emotion_map)
 df["video_id"] = df["order"]
 
 # Save the updated CSV
-df.to_csv('/content/drive/MyDrive/60535_CV/final/data/DFEW/actual_DFEW_emo_label.csv', index=False)
+df.to_csv('./data/DFEW/actual_DFEW_emo_label.csv', index=False)
 
 print("Mapping complete!")
 print(f"\nFirst 10 rows:")
