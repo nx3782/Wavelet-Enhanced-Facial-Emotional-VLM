@@ -125,14 +125,6 @@ Prefix tuning + LoRA benefits: Parameter efficiency: Only ~118M trainable parame
 
 We also expect to have prompt included, but we are still testing out the performance of this input as we believe the facial emotional changes should be the primary focus for this project. We decide to exclude that for now. 
 
-**Instructions**: Clone this repo, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
-1. Read in the pre-process csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, actual, video_id, file_path. 
-2. Load video using OpenCV
-3. Extract frames and convert to RGB
-4. Process each frame through MediaPipe FaceLandmarker
-5. Collect landmarks (478, 3) and blendshapes (52,) per frame
-6. Apply wavelet transform to temporal trajectories
-7. Save compressed features to NPY file with pre-defined output path. 
 
 **Output Format**: NPY file containing array of dictionaries, example views are also given here for better structure view:
 Each entry: {
@@ -141,11 +133,6 @@ Each entry: {
     'blendshapes': (10, 52) array
 }
 
-<tr><td width="30%"><image src="samples-gif/npy_example_1.png" /></td><td width="15%"></td></tr>
-<tr><td width="30%"><image src="samples-gif/npy_example_2.png" /></td><td width="15%"></td></tr>
-<tr><td width="30%"><image src="samples-gif/npy_example_3.png" /></td><td width="15%"></td></tr>
-
-
 ### 3.2 Wavelet Feature Extraction
 
 **Configuration:**
@@ -153,7 +140,7 @@ Each entry: {
 - Number of coefficients: 10 (can adjust)
 - Normalization: Coefficients divided by √(2^L)
 
-**Adaptive decomposition level:**
+**Adaptive decomposition level**:
 ```
 For video with T frames:
 T' = 2^⌈log₂(T)⌉
@@ -218,7 +205,21 @@ Blendshapes:
 - 52 blendshapes × 1800 frames = 93,600 values
 - After wavelets: 52 × 10 = 520 values
 - Compression ratio: 180x smaller
+```
 
 **Contribution**: This is an individual final project work. So I have done data curation and preparation, including data cleaning and data pre-processing alone throughout the semester. 
 
-**Instructions on Codes**: Push your current codes to your project repository (5 points). These codes should implement what you described in the report. Provide instructions how to run your codes on a data example (attach this example to your codes). Either Adam or the TA will run them to see how the current solution works.
+**Instructions on Codes**: For the data pre-process part, clone this repo, change directory into "paligema-mlp" folder, run "preprocess_landmarks.py" file to get landmarks and blendshapes packed into a npy file. The file path has already setup, so no need to change them manually as long as the file is running inside "paligema-mlp" folder. More specifically, the python file follows the following steps to get the landmark and blendshape data from input videos: 
+1. Read in the pre-process csv file that contains columns 1happy, 2sad, 3neutral, 4angry, 5surprise, 6disgust, 7fear, order, label, actual, video_id, file_path. 
+2. Load video using OpenCV
+3. Extract frames and convert to RGB
+4. Process each frame through MediaPipe FaceLandmarker
+5. Collect landmarks (478, 3) and blendshapes (52,) per frame
+6. Apply wavelet transform to temporal trajectories
+7. Save compressed features to NPY file with pre-defined output path. 
+
+After finishing running the code above, you can use np.load(file_name, allow_pickle=True) to see some outputs with similar structure to the following example view: 
+
+<tr><td width="30%"><image src="samples-gif/npy_example_1.png" /></td><td width="15%"></td></tr>
+<tr><td width="30%"><image src="samples-gif/npy_example_2.png" /></td><td width="15%"></td></tr>
+<tr><td width="30%"><image src="samples-gif/npy_example_3.png" /></td><td width="15%"></td></tr>
