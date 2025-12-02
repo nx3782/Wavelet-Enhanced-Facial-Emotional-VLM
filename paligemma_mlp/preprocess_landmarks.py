@@ -86,7 +86,7 @@ class FaceLandmarkerWithBlendshapes:
         if self.detector:
             self.detector.close()
 
-# use np_filed[index]["file_path"] to check whether it exists. 
+# use np_file[index]["file_path"] to check whether it exists. 
 def process_video(video_path, n_coefficients=10, model_path='face_landmarker.task'):
     """
     Extract landmarks and blendshapes from video, convert to wavelet features.
