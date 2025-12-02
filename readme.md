@@ -246,13 +246,13 @@ After finishing running the code above, you can use np.load(file_name, allow_pic
 
 Part 4: Final Solution
 
-4.1 Overview
+**4.1 Overview**
 
 By this stage, the entire pipeline for the project is implemented and running end-to-end. All components—including preprocessing, segmentation, MediaPipe landmark extraction, blendshape extraction, wavelet-based temporal compression, and classification—have been integrated into a unified system.
 
 This part presents the justification for the chosen classifier, reports training and validation accuracy on the dynamic facial expression dataset (DFEW subset), analyzes model behavior, and outlines improvements for generalization and final testing.
 
-4.2 Justification of the Classifier Choice
+**4.2 Justification of the Classifier Choice**
 
 After completing preprocessing, segmentation, and feature extraction, the final step in the pipeline is the classification model that maps wavelet-compressed features to one of the seven emotion categories. I selected a lightweight Multi-Layer Perceptron (MLP) classifier for the following reasons:
 
