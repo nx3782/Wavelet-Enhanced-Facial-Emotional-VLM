@@ -68,9 +68,7 @@ class VideoLandmarkDataset(Dataset):
         row = self.data.iloc[idx]
         image_path = row['file_path']  # New column name for pre-processed grid images
         prompt = row['prompt']
-        target1 = row['promis_anx']
-        target2 = row['promis_dep']
-        targets = torch.tensor([target1, target2], dtype=torch.bfloat16)
+        targets = row['actual'] # actual emotion label
         landmark_data = torch.tensor(self.landmarks[row['video_idx']], dtype=torch.bfloat16)
 
         grid_image = self.load_grid_image(image_path)
@@ -82,6 +80,9 @@ class VideoLandmarkDataset(Dataset):
             "landmarks": landmark_data
         }
 
+        # target1 = row['promis_anx']
+        # target2 = row['promis_dep']
+        # targets = torch.tensor([target1, target2], dtype=torch.bfloat16)
 
 class PaliGemmaDataModule(L.LightningDataModule):
     def __init__(
