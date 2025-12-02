@@ -265,3 +265,11 @@ In conclusion, the MLP strikes the right balance: expressive enough to learn mea
 **4.3 Classification Accuracy: Training vs. Validation**
 
 The classifier was trained on the wavelet-based landmark + blendshape representations of the DFEW sample dataset. Performance is measured using simple classification accuracy.
+
+**4.4 Commentary on Observed Accuracy and Model Behavior**
+
+
+**4.5 Instructions for Running the Final Code**
+(1). Landmark + Blendshape Extraction: This is one of the most important part because we want to get these features from videos. By doing so, you need to change directory to "paligema-mlp" and then run this command: "python3 preprocess_landmarks.py". Make sure you change these paths: "csv_path" and "output_path". 
+(2). Run command "python3 train_paligemma.py", which means you are now training a small portion of the paligemma model. Make sure you changes these paths: "model_path", "train_csv", "landmark_path", "output_dir", "checkpoint_path". 
+
