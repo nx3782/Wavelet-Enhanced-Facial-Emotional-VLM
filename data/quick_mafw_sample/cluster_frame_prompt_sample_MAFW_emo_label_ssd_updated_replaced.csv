@@ -1,0 +1,101 @@
+﻿video_name,single_label,actual,annotation,video_path,exist,sample_path
+10784.mp4,6,sadness,A woman bows her head and cries in great pain. The deep frown and the slightly open mouth.,/data/naihao/MAFW_sample/data/10784.mp4,True,./sample_subset/10784.mp4
+07799.mp4,6,sadness,A woman complains loudly. The wide eyes and  the  open mouth.,/data/naihao/MAFW_sample/data/07799.mp4,True,./sample_subset/07799.mp4
+05822.mp4,7,surprise,"A woman heard the results, smiled and asked about the authenticity of the results, feeling incredulous. The higher inner corners of eyebrows, the lower outer corners of eyebrows and the raised lip corners.",/data/naihao/MAFW_sample/data/05822.mp4,True,./sample_subset/05822.mp4
+07468.mp4,7,surprise,A man looks back and forth a few times and suddenly turns his head to speak. The open mouth.,/data/naihao/MAFW_sample/data/07468.mp4,True,./sample_subset/07468.mp4
+00617.mp4,3,fear,"A woman looks across the room and slowly rises, breathing tightly. The wide open eyes, the tighten chin and the slightly open lips.",/data/naihao/MAFW_sample/data/00617.mp4,True,./sample_subset/00617.mp4
+08290.mp4,7,surprise,"A man is stunned by another man. The lower inner corners of eyebrows, the higher outer corners of eyebrows, the wide eyes, the open mouth and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/08290.mp4,True,./sample_subset/08290.mp4
+07013.mp4,6,sadness,A woman lowers her head and shed tears silently. The closed eyes and a downward pull on the lip corners.,/data/naihao/MAFW_sample/data/07013.mp4,True,./sample_subset/07013.mp4
+10319.mp4,1,anger,"A woman excitedly accuses someone of not paying for breakfast and throws something at him. The wide eyes, the lower inner corners of eyebrows and the higher outer corners of eyebrows.",/data/naihao/MAFW_sample/data/10319.mp4,True,./sample_subset/10319.mp4
+07626.mp4,1,anger,"A man asks. The wide eyes ,the lower inner corners of eyebrows and the higher outer corners of eyebrows.",/data/naihao/MAFW_sample/data/07626.mp4,True,./sample_subset/07626.mp4
+11143.mp4,9,anxiety,"Next to a hut, a woman stands up as she spoke. The marked frown and the wide eyes.",/data/naihao/MAFW_sample/data/11143.mp4,True,./sample_subset/11143.mp4
+07082.mp4,7,surprise,"A woman trembles suddenly after seeing the man, covering her mouth with her hand. The wide eyes, the higher inner corners of eyebrows and the lower outer corners of eyebrows.",/data/naihao/MAFW_sample/data/07082.mp4,True,./sample_subset/07082.mp4
+10143.mp4,8,contempt,A woman's face is full of disapproval. The marked frown and the slightly open mouth.,/data/naihao/MAFW_sample/data/10143.mp4,True,./sample_subset/10143.mp4
+10907.mp4,6,sadness,A boy bows his head slightly after saying sorry to someone. The compressed lips.,/data/naihao/MAFW_sample/data/10907.mp4,True,./sample_subset/10907.mp4
+20040.mp4,1,anger,"A man holding up the phone repeats turning around and yells at the people in the back seat. The frown, the wrinkled nose, the compressed lips, and the clenched teeth.",/data/naihao/MAFW_sample/data/20040.mp4,True,./sample_subset/20040.mp4
+07887.mp4,2,disgust,A woman complains about someone. The frown.,/data/naihao/MAFW_sample/data/07887.mp4,True,./sample_subset/07887.mp4
+02125.mp4,1,anger,A woman speaks to the other side with her arms crossed. The higher outer corners of eyebrows and the wide eyes.,/data/naihao/MAFW_sample/data/02125.mp4,True,./sample_subset/02125.mp4
+15519.mp4,11,disappointment,A man sitting next to a policeman sighs. The frown and the slightly open mouth.,/data/naihao/MAFW_sample/data/15519.mp4,True,./sample_subset/15519.mp4
+08217.mp4,2,disgust,"A woman gives a disdainful look. The lower inner corners of eyebrows, the higher outer corners of eyebrows, the half-closed eyes and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/08217.mp4,True,./sample_subset/08217.mp4
+07032.mp4,3,fear,"He looks at a girl somewhere and she is panting. The wide eyes, the lower inner corners of eyebrows and the higher outer corners of eyebrows.",/data/naihao/MAFW_sample/data/07032.mp4,True,./sample_subset/07032.mp4
+08286.mp4,1,anger,"A woman yells at the man in front of her. The wide eyes, the open mouth and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/08286.mp4,True,./sample_subset/08286.mp4
+10382.mp4,1,anger,A woman resents her boyfriend for a clown. The blink eyes and the wide eyes.,/data/naihao/MAFW_sample/data/10382.mp4,True,./sample_subset/10382.mp4
+08506.mp4,9,anxiety,A woman apologizes with guilt.  The marked frown and the open mouth.,/data/naihao/MAFW_sample/data/08506.mp4,True,./sample_subset/08506.mp4
+10273.mp4,1,anger,A woman questions her boyfriend about the identity of another woman. The mark frown and the wide eyes.,/data/naihao/MAFW_sample/data/10273.mp4,True,./sample_subset/10273.mp4
+04153.mp4,6,sadness,"The man looks down, looks dignified and tells his experience. The slight frown and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/04153.mp4,True,./sample_subset/04153.mp4
+10542.mp4,3,fear,A man sees something and stands up in fright. The deep frown and the open mouth.,/data/naihao/MAFW_sample/data/10542.mp4,True,./sample_subset/10542.mp4
+02808.mp4,4,happiness,A woman looks at the other side of her head. The raised lip corners.,/data/naihao/MAFW_sample/data/02808.mp4,True,./sample_subset/02808.mp4
+15057.mp4,1,anger,"A middle-aged woman sit on a stool, speaks to the other side, waving her hands excitedly. The raised eyebrows, the wrinkled nose and the shaking head.",/data/naihao/MAFW_sample/data/15057.mp4,True,./sample_subset/15057.mp4
+09699.mp4,6,sadness,A man hugs the woman in front of him and shed tears. The higher inner corners of eyebrows and the lower outer corners of eyebrows and the slightly open mouth.,/data/naihao/MAFW_sample/data/09699.mp4,True,./sample_subset/09699.mp4
+06925.mp4,9,anxiety,A woman keeps staring somewhere with wide-eyed eyes. The raised left lip corner and the wide eyes.,/data/naihao/MAFW_sample/data/06925.mp4,True,./sample_subset/06925.mp4
+02031.mp4,1,anger,A man shook his head as he spoke. The frown and the wrinkled nose.,/data/naihao/MAFW_sample/data/02031.mp4,True,./sample_subset/02031.mp4
+03983.mp4,11,disappointment,The woman shakes her head at the man in front of her and gives him advice. The slight frown and compressed lips.,/data/naihao/MAFW_sample/data/03983.mp4,True,./sample_subset/03983.mp4
+10501.mp4,3,fear,A man sits topless and paralyzed on the floor. The deep frown and the slightly open mouth.,/data/naihao/MAFW_sample/data/10501.mp4,True,./sample_subset/10501.mp4
+05188.mp4,6,sadness,A woman spits out her tongue with an expressionless face.A pout.,/data/naihao/MAFW_sample/data/05188.mp4,True,./sample_subset/05188.mp4
+04838.mp4,4,happiness,A man excitedly shows himself live show. The raised lip corners and the slightly open mouth.,/data/naihao/MAFW_sample/data/04838.mp4,True,./sample_subset/04838.mp4
+11237.mp4,7,surprise,A man listens to the boss. The frown and the slightly open mouth.,/data/naihao/MAFW_sample/data/11237.mp4,True,./sample_subset/11237.mp4
+10554.mp4,3,fear,A woman stands on the balcony to look down and gasps for air. The deep frown and the open mouth.,/data/naihao/MAFW_sample/data/10554.mp4,True,./sample_subset/10554.mp4
+02140.mp4,6,sadness,A woman slowly opens her eyes and looks ahead. The frown and the wrinkled nose.,/data/naihao/MAFW_sample/data/02140.mp4,True,./sample_subset/02140.mp4
+08565.mp4,6,sadness,"A woman holds back her emotions so that she wouldn't cry. The marked frown, the wrinkled nose and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/08565.mp4,True,./sample_subset/08565.mp4
+00933.mp4,10,helplessness,"A man mutters to himself, seemingly plots something. The raised left lip corner.",/data/naihao/MAFW_sample/data/00933.mp4,True,./sample_subset/00933.mp4
+04426.mp4,4,happiness,A woman smiles and speaks to the camera. The raised lip corners.,/data/naihao/MAFW_sample/data/04426.mp4,True,./sample_subset/04426.mp4
+07066.mp4,2,disgust,"A woman arrogantly shows off to the old man and keeps provoking the old man. The narrowed eyes,the higher inner corners of eyebrows and the lower outer corners of eyebrows.",/data/naihao/MAFW_sample/data/07066.mp4,True,./sample_subset/07066.mp4
+07730.mp4,2,disgust,A man cries out in pain. The frown.,/data/naihao/MAFW_sample/data/07730.mp4,True,./sample_subset/07730.mp4
+15205.mp4,7,surprise,"After the explosion, a girl breathes heavily and questions loudly. The wide eyes, the half-open mouth, the frown, and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/15205.mp4,True,./sample_subset/15205.mp4
+09476.mp4,9,anxiety,A man rings the doorbell. The frown and the compressed lips.,/data/naihao/MAFW_sample/data/09476.mp4,True,./sample_subset/09476.mp4
+10377.mp4,1,anger,A man yells at the other to shut up and turns his head. The wide eyes and the open mouth.,/data/naihao/MAFW_sample/data/10377.mp4,True,./sample_subset/10377.mp4
+00913.mp4,4,happiness,"A man holds his chin in his hand, blinks his left eye confidently and points his finger forward. The compressed lips and the slightly raised lips.",/data/naihao/MAFW_sample/data/00913.mp4,True,./sample_subset/00913.mp4
+03668.mp4,4,happiness,A man looks down with a smile. The raised lip corners.,/data/naihao/MAFW_sample/data/03668.mp4,True,./sample_subset/03668.mp4
+02723.mp4,6,sadness,"A man looks at the ground in a panicked manner. The frown, the wrinkled nose and the open mouth.",/data/naihao/MAFW_sample/data/02723.mp4,True,./sample_subset/02723.mp4
+04230.mp4,4,happiness,"Facing his girlfriend's question, the man answered with a smile. The lower inner corners of eyebrows, the higher outer corners of eyebrows, the narrowed eyes and the raised lip corners.",/data/naihao/MAFW_sample/data/04230.mp4,True,./sample_subset/04230.mp4
+01869.mp4,8,contempt,"A man thinks for a moment after hearing the others' words, then gives a small smile and bowed his head. The raised left lip corner.",/data/naihao/MAFW_sample/data/01869.mp4,True,./sample_subset/01869.mp4
+04640.mp4,2,disgust,"The woman looks out of the window and talks on the phone call with disdain. The deep frown, the higher inner corners of eyebrows and the lower outer corners of eyebrows.",/data/naihao/MAFW_sample/data/04640.mp4,True,./sample_subset/04640.mp4
+15465.mp4,10,helplessness,"A man walks down the street with a lack of interest. The slight frown, the compressed lips, and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/15465.mp4,True,./sample_subset/15465.mp4
+10512.mp4,3,fear,A man shivers as he holds a stone. The wide eyes and the slightly open mouth.,/data/naihao/MAFW_sample/data/10512.mp4,True,./sample_subset/10512.mp4
+15222.mp4,9,anxiety,"A woman is in a spin in front of a man. The frown, the lower inner corners of eyebrows, the higher outer corners of eyebrows, and the wide eyes.",/data/naihao/MAFW_sample/data/15222.mp4,True,./sample_subset/15222.mp4
+07191.mp4,6,sadness,A woman rushes to someone with tears in her eyes. The open mouth and the closed eyes.,/data/naihao/MAFW_sample/data/07191.mp4,True,./sample_subset/07191.mp4
+09190.mp4,1,anger,A man is scolding the man opposite. The frown and the raised eyebrows.,/data/naihao/MAFW_sample/data/09190.mp4,True,./sample_subset/09190.mp4
+09349.mp4,3,fear,"In the dark, a man shouts and steps back. The open mouth.",/data/naihao/MAFW_sample/data/09349.mp4,True,./sample_subset/09349.mp4
+05769.mp4,7,surprise,A man smiles in shock as he manages to complete a spurt of fire with the fire-breathing toy in his hand. The raised lip corners.,/data/naihao/MAFW_sample/data/05769.mp4,True,./sample_subset/05769.mp4
+10958.mp4,6,sadness,"One woman cries and questions the other, then covers her face with her hands. The slightly closed eyes, the higher inner corners of eyebrows, the lower outer corners of eyebrows and downward pull on the lip corners.",/data/naihao/MAFW_sample/data/10958.mp4,True,./sample_subset/10958.mp4
+05917.mp4,1,anger,A woman scolds the woman in front of her and steps backwards. The  frown and a downward pull on the lip corners.,/data/naihao/MAFW_sample/data/05917.mp4,True,./sample_subset/05917.mp4
+11039.mp4,6,sadness,A woman sits on the bed with an aggrieved face and complains to the woman next to her. The slight frown and a downward pull on the lip corners.,/data/naihao/MAFW_sample/data/11039.mp4,True,./sample_subset/11039.mp4
+09510.mp4,3,fear,A woman touchs her chest and keeps patting her husband. The wide eyes and the raised eyebrows.,/data/naihao/MAFW_sample/data/09510.mp4,True,./sample_subset/09510.mp4
+08972.mp4,7,surprise,"A woman asks the other rhetorically. The marked frown, the rolled eyes, and the raised lip corners.",/data/naihao/MAFW_sample/data/08972.mp4,True,./sample_subset/08972.mp4
+05098.mp4,4,happiness,A woman gets a large sum of money on the show. The slightly closed eyes and the raised lip corners.,/data/naihao/MAFW_sample/data/05098.mp4,True,./sample_subset/05098.mp4
+10440.mp4,1,anger,A man cranes his head and looks down at the other. The wide eyes and the wrinkled nose.,/data/naihao/MAFW_sample/data/10440.mp4,True,./sample_subset/10440.mp4
+09741.mp4,3,fear,A woman clutches her cell phone tightly and takes a step backwards. The wide eyes and the slightly open mouth.,/data/naihao/MAFW_sample/data/09741.mp4,True,./sample_subset/09741.mp4
+07994.mp4,6,sadness,A child sits crying in the snow. The slightly closed eyes and the  compressed lips.,/data/naihao/MAFW_sample/data/07994.mp4,True,./sample_subset/07994.mp4
+02963.mp4,4,happiness,A man crosses his arms across his chest. The raised lip corners.,/data/naihao/MAFW_sample/data/02963.mp4,True,./sample_subset/02963.mp4
+10779.mp4,7,surprise,"A man hides in a corner, flustered and uncomfortable. The deep frown and the wide eyes.",/data/naihao/MAFW_sample/data/10779.mp4,True,./sample_subset/10779.mp4
+01492.mp4,6,sadness,A man speaks his mind. The compressed lips.,/data/naihao/MAFW_sample/data/01492.mp4,True,./sample_subset/01492.mp4
+08078.mp4,1,anger,A man yells at the team. The wide eyes and  the  open mouth.,/data/naihao/MAFW_sample/data/08078.mp4,True,./sample_subset/08078.mp4
+07076.mp4,1,anger,A woman was dumbfounds by the accusations from the opposite side. The marked frown and the half-open mouth.,/data/naihao/MAFW_sample/data/07076.mp4,True,./sample_subset/07076.mp4
+05316.mp4,2,disgust,A woman who feels that the person in front of her should be ashamed. The marked frown and a curl of the lips.,/data/naihao/MAFW_sample/data/05316.mp4,True,./sample_subset/05316.mp4
+09836.mp4,7,surprise,A woman breaths at her desk. The open mouth.,/data/naihao/MAFW_sample/data/09836.mp4,True,./sample_subset/09836.mp4
+01970.mp4,1,anger,A woman speaks of her misfortune. A downward pull on the lip corners and the slight frown.,/data/naihao/MAFW_sample/data/01970.mp4,True,./sample_subset/01970.mp4
+02225.mp4,4,happiness,A boy runs with a basket on his basket. The wrinkled nose.,/data/naihao/MAFW_sample/data/02225.mp4,True,./sample_subset/02225.mp4
+15202.mp4,6,sadness,A man weeps against the wind in the heavy snow. The slightly closed eyes and the compressed lips.,/data/naihao/MAFW_sample/data/15202.mp4,True,./sample_subset/15202.mp4
+09734.mp4,7,surprise,A woman screams when she sees a man. The wide eyes and the slightly open mouth.,/data/naihao/MAFW_sample/data/09734.mp4,True,./sample_subset/09734.mp4
+15447.mp4,2,disgust,"A woman complains in airport lounge. The slightly wrinkled nose, the slightly narrowed eyes, a downward pull on the lip corners, and a curl of the lips.",/data/naihao/MAFW_sample/data/15447.mp4,True,./sample_subset/15447.mp4
+09646.mp4,6,sadness,A woman looks at her phone and cries silently. The frown.,/data/naihao/MAFW_sample/data/09646.mp4,True,./sample_subset/09646.mp4
+07676.mp4,6,sadness,"A woman pleads through tears. The wide eyes,the lower inner corners of eyebrows and the higher outer corners of eyebrows.",/data/naihao/MAFW_sample/data/07676.mp4,True,./sample_subset/07676.mp4
+10115.mp4,2,disgust,A man rolls his eyes. The marked frown and a downward pull on the lip corners.,/data/naihao/MAFW_sample/data/10115.mp4,True,./sample_subset/10115.mp4
+09801.mp4,3,fear,A woman hears the monster roar and cries. The wide eyes.,/data/naihao/MAFW_sample/data/09801.mp4,True,./sample_subset/09801.mp4
+08869.mp4,7,surprise,An old man holds a bag of oranges in his hand and then smiles at the man across from him.A grin.,/data/naihao/MAFW_sample/data/08869.mp4,True,./sample_subset/08869.mp4
+09280.mp4,9,anxiety,"A woman, with tears in her eyes, hears other's words and shouts other's name. The frown and the slightly closed eyes.",/data/naihao/MAFW_sample/data/09280.mp4,True,./sample_subset/09280.mp4
+01832.mp4,11,disappointment,A woman in uniform with flowers looks around. The frown and a downward pull on the lip corners.,/data/naihao/MAFW_sample/data/01832.mp4,True,./sample_subset/01832.mp4
+07773.mp4,6,sadness,A man rubs his face in remorse. The frown and The closed eyes.,/data/naihao/MAFW_sample/data/07773.mp4,True,./sample_subset/07773.mp4
+03374.mp4,1,anger,"A woman talks irascibly to another woman. The raised chin,the lower inner corners of eyebrows and the higher outer corners of eyebrows.",/data/naihao/MAFW_sample/data/03374.mp4,True,./sample_subset/03374.mp4
+07838.mp4,6,sadness,A woman shakes her head. The frown and the closed eyes.,/data/naihao/MAFW_sample/data/07838.mp4,True,./sample_subset/07838.mp4
+00542.mp4,6,sadness,"A girl with tears in her eyes, looks somewhere. The wide eyes, the slight frown and the slightly open mouth .",/data/naihao/MAFW_sample/data/00542.mp4,True,./sample_subset/00542.mp4
+04500.mp4,4,happiness,A  man smiles and speaks to the camera. The raised lip corners.,/data/naihao/MAFW_sample/data/04500.mp4,True,./sample_subset/04500.mp4
+07764.mp4,6,sadness,A man replies bitterly. The frown and the closed eyes.,/data/naihao/MAFW_sample/data/07764.mp4,True,./sample_subset/07764.mp4
+07034.mp4,6,sadness,"A woman looks up at someone, tantrums at someone with tears in her eyes. The narrowed eyes,the higher inner corners of eyebrows and the lower outer corners of eyebrows.",/data/naihao/MAFW_sample/data/07034.mp4,True,./sample_subset/07034.mp4
+05143.mp4,4,happiness,A man laughs out loud. The raised lip corners.,/data/naihao/MAFW_sample/data/05143.mp4,True,./sample_subset/05143.mp4
+09070.mp4,9,anxiety,The woman sighs and asks a question. The deep frown and  the slightly open mouth.,/data/naihao/MAFW_sample/data/09070.mp4,True,./sample_subset/09070.mp4
+05799.mp4,2,disgust,"A woman can't stop shaking her head, showing a mocking look. The narrowed eyes and a downward pull on the lip corners.",/data/naihao/MAFW_sample/data/05799.mp4,True,./sample_subset/05799.mp4
+01271.mp4,4,happiness,A man compliments a girl on her nice hair.  The wide eyes and the raised lip corners.,/data/naihao/MAFW_sample/data/01271.mp4,True,./sample_subset/01271.mp4
+04410.mp4,4,happiness,"On the stage, the woman holds the microphone and talks with a smile. The raised lip corners.",/data/naihao/MAFW_sample/data/04410.mp4,True,./sample_subset/04410.mp4
+15308.mp4,1,anger,A man with a reluctant face glances warily at the crowd. A suck of the lips into the mouth and a downward pull on the lip corners.,/data/naihao/MAFW_sample/data/15308.mp4,True,./sample_subset/15308.mp4
+15560.mp4,9,anxiety,"A woman receives a blackmail call and feels flustered. The slightly frown, the wide eyes, and the half-open mouth.",/data/naihao/MAFW_sample/data/15560.mp4,True,./sample_subset/15560.mp4
