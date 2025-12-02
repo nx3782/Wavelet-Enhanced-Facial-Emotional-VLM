@@ -247,55 +247,21 @@ After finishing running the code above, you can use np.load(file_name, allow_pic
 Part 4: Final Solution
 
 **4.1 Overview**
-
-By this stage, the entire pipeline for the project is implemented and running end-to-end. All components—including preprocessing, segmentation, MediaPipe landmark extraction, blendshape extraction, wavelet-based temporal compression, and classification—have been integrated into a unified system.
-
-This part presents the justification for the chosen classifier, reports training and validation accuracy on the dynamic facial expression dataset (DFEW subset), analyzes model behavior, and outlines improvements for generalization and final testing.
+By this stage, the entire pipeline for the project is implemented and running end-to-end. All components—including preprocessing, segmentation, MediaPipe landmark extraction, blendshape extraction, wavelet-based temporal compression, and classification—have been integrated into a unified system. I made some changes to the data structure of DFEW since originally they do not have scene annotations, which then I used Qwen2.5-VL-3B to generate by feeding some human annotated samples from MAFW. The reason I chose Qwen2.5-VL instead of Qwen3-vl was that Qwen2.5-VL has a default way to read in videos and then extract frames from them, which has been verified with excellent performances, whereas Qwen3-vl requires users to extract frames first and then pass them as image inputs, which may lead to bias. I totally have 8034 samples from MAFW dataset, including 6427 and 1607 train/val samples (80-20 split) with true emotion label and generated annotations. For DFEW, I have a total of 11697 samples, including 9356 and 2341 train/val samples (80-20 split) with true emotion label and human-labeled annotation.  
 
 **4.2 Justification of the Classifier Choice**
 
-After completing preprocessing, segmentation, and feature extraction, the final step in the pipeline is the classification model that maps wavelet-compressed features to one of the seven emotion categories. I selected a lightweight Multi-Layer Perceptron (MLP) classifier for the following reasons:
+After completing preprocessing, segmentation, and feature extraction, the final step in the pipeline is the classification model that maps wavelet-compressed features to one of the seven emotion categories. I selected a lightweight Multi-Layer Perceptron (MLP) classifier for the following reasons: 
+(1) Structure of the Input Features: The extracted features consist of:
+    - Landmark trajectories: (10, 478, 3) wavelet coefficients
+    - Blendshape trajectories: (10, 52) wavelet coefficients
+These features are: Low-dimensional compared to raw video; Temporally aligned; Already compressed to multi-scale wavelet descriptors; and Continuous numeric vectors, which means the classifier does not need a heavy temporal model (e.g., LSTM, 3D CNN, or Transformer). Temporal dynamics have already been encoded into fixed-length vectors.
 
-(1) Structure of the Input Features
+(2) Why is MLP the Appropriate choice: A simple MLP is well-suited because Wavelet transform already captures multi-scale temporal structure, reducing the burden on the classifier. Landmark + blendshape features are dense, continuous, and structured, which MLPs handle efficiently. In addition, MLPs avoid overfitting better than deeper CNNs or transformers when training data is limited.
 
-The extracted features consist of:
+In conclusion, the MLP strikes the right balance: expressive enough to learn meaningful distinctions, but simple enough to avoid memorizing person-specific geometric patterns.
 
-Landmark trajectories: (10, 478, 3) wavelet coefficients
 
-Blendshape trajectories: (10, 52) wavelet coefficients
+**4.3 Classification Accuracy: Training vs. Validation**
 
-These features are:
-
-Low-dimensional compared to raw video
-
-Temporally aligned
-
-Already compressed to multi-scale wavelet descriptors
-
-Continuous numeric vectors
-
-This means the classifier does not need a heavy temporal model (e.g., LSTM, 3D CNN, or Transformer). Temporal dynamics have already been encoded into fixed-length vectors.
-
-(2) Why an MLP Is Appropriate
-
-A simple MLP is well-suited because:
-
-Wavelet transform already captures multi-scale temporal structure, reducing the burden on the classifier.
-
-Landmark + blendshape features are dense, continuous, and structured, which MLPs handle efficiently.
-
-MLPs avoid overfitting better than deeper CNNs or transformers when training data is limited.
-
-From the Face-Gemma results (ICCV submission), a similar pipeline demonstrates that small classifiers perform well when paired with wavelet-encoded trajectories, validating this architectural choice.
-
-In short, the MLP strikes the right balance: expressive enough to learn meaningful distinctions, but simple enough to avoid memorizing person-specific geometric patterns.
-
-(3) Alternatives Considered
-
-SVM (RBF): Not ideal for 15k+ samples × multi-dimensional features; scaling and tuning become difficult.
-
-RNN / LSTM: Redundant because wavelets already provide temporal compression.
-
-3D CNNs or Vision Transformers: Overkill for landmark features, high compute requirement, higher overfitting risk.
-
-Therefore, the MLP classifier is the most suitable and efficient choice for wavelet-compressed facial dynamics.
+The classifier was trained on the wavelet-based landmark + blendshape representations of the DFEW sample dataset. Performance is measured using simple classification accuracy.
