@@ -331,14 +331,14 @@ if __name__ == "__main__":
     # train_paligemma(
     #     model_path="google/paligemma2-3b-mix-448",
     #     train_csv="./data/train_pali_mix_prompt.csv",
-    #     landmark_path="/data/yogesh/celebvtext/processed_wavelet_features_all.npy",
+    #     landmark_path="/data/naihao/celebvtext/processed_wavelet_features_all.npy",
     #     output_dir="./models/paligemma_regression_finetuned",
     #     checkpoint_path="./models/paligemma_regression_finetuned/checkpoints/paligemma_regression.ckpt"
     
     train_paligemma(
         model_path="google/paligemma2-3b-mix-448",
         train_csv="./data/train_pali_mix_prompt.csv",
-        landmark_path="/data/yogesh/celebvtext/processed_wavelet_features_all.npy",
+        landmark_path="/data/naihao/celebvtext/processed_wavelet_features_all.npy",
         output_dir="./models/paligemma_regression_finetuned",
         checkpoint_path="./models/paligemma_regression_finetuned/checkpoints/paligemma_regression.ckpt"
     )
