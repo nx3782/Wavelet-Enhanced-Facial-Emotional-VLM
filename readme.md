@@ -266,10 +266,11 @@ In conclusion, the MLP strikes the right balance: expressive enough to learn mea
 
 The classifier was trained on the wavelet-based landmark + blendshape representations of the DFEW sample dataset. Performance is measured using simple classification accuracy.
 
-**4.4 Commentary on Observed Accuracy and Model Behavior**
+**4.4 Explanations on Switching Plans**
+**Insufficient Compute Resources**: The training I tried to implement here needed extensive manual garbage collection and tensor deletion throughout, which limited me from finishing the training. The resource paper was training the model on 8 NVIDIA A100 GPUs.
+**Architecture Mismatch**: My landmark projector implements cross-attention to both image and text features with a 6-layer transformer, which is more complex than I thought originally. 
+**Hardcoded Sequence Length**: I tried to slice text features at position 1035, assuming a fixed sequence length that may not match the actual data configuration.
 
+**Model Class Inconsistency**: My training script used PaliGemmaForRegression with MSE loss, which is used for numerical predcition even though it has ability to do numerical-text mapping, still it would be too complicated and ambitious here. 
 
-**4.5 Instructions for Running the Final Code**
-(1). Landmark + Blendshape Extraction: This is one of the most important part because we want to get these features from videos. By doing so, you need to change directory to "paligema-mlp" and then run this command: "python3 preprocess_landmarks.py". Make sure you change these paths: "csv_path" and "output_path". 
-(2). Run command "python3 train_paligemma.py", which means you are now training a small portion of the paligemma model. Make sure you changes these paths: "model_path", "train_csv", "landmark_path", "output_dir", "checkpoint_path". 
 
