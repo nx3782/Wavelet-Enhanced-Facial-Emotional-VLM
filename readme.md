@@ -274,3 +274,4 @@ The classifier was trained on the wavelet-based landmark + blendshape representa
 **Model Class Inconsistency**: My training script used PaliGemmaForRegression with MSE loss, which is used for numerical predcition even though it has ability to do numerical-text mapping, still it would be too complicated and ambitious here. 
 
 
+Please move to the following repo for the final project: https://github.com/nx3782/LMM-Performance-on-Medical-Field/blob/main/readme.md 
